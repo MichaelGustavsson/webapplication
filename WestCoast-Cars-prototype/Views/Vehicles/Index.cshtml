@@ -1,0 +1,14 @@
+@model IList<WestCoast_Cars.ViewModels.VehicleViewModel>
+
+<h1>Aktuella bilar till försäljning</h1>
+<section>
+  <h4><a asp-action="Create" asp-controller="Vehicles">Lägg till ny bil</a></h4>
+  @* Loopa/Iterera igenom alla bilar som jag får via controller metoden... *@
+  @foreach (var vehicle in Model) {
+    @* TagHelper för att skapa en länk(<a>) *@
+    @* https://localhost:5001/vehicles/details/1 *@
+    <div>
+      <a asp-action="details" asp-controller="vehicles" asp-route-id="@vehicle.Id">@vehicle.Make | @vehicle.Model | @vehicle.ModelYear</a>
+    </div>
+  }
+</section>

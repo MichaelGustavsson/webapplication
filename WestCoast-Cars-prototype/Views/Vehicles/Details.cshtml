@@ -1,0 +1,9 @@
+@model WestCoast_Cars.ViewModels.VehicleViewModel
+<section>
+  
+  @* Vill jag skapa en lista av detaljer om bilen som är vald i listan... *@
+  <h1>Information om vald bil</h1>
+  <h2>@Model.Make - @Model.Model - @Model.ModelYear</h2>
+  <p>Registreringsnummer @Model.RegNo</p>
+  <a asp-action="index">Gå till listan av bilar</a>
+</section>

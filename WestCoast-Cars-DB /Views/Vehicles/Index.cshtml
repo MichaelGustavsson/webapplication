@@ -1,0 +1,14 @@
+@model IList<WestCoast_Cars.ViewModels.VehicleViewModel>
+
+<h1>Aktuella bilar</h1>
+
+<section>
+  @foreach(var vehicle in Model){
+    <a asp-action="details" asp-controller="vehicles" asp-route-id="@vehicle.Id">@vehicle.Make - @vehicle.Model - @vehicle.ModelYear</a>
+    @* <div>@vehicle.Make</div>
+    <div>@vehicle.Model</div>
+    <div>@vehicle.ModelYear</div>
+    <div>@vehicle.Mileage</div> *@
+    <hr/>
+  }
+</section>
