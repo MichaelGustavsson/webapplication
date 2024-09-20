@@ -1,0 +1,10 @@
+@model WestCoast_Cars.ViewModels.VehicleViewModel
+
+<section>
+  <h1>Information om vald bil</h1>
+  <h2>@Model.Make - @Model.Model</h2>
+  <div>Årsmodell: @Model.ModelYear | Antal km: @Model.Mileage</div>
+  <p>
+    <a asp-action="index" asp-controller="vehicles">Gå till listan av bilar</a>
+  </p>
+</section>
